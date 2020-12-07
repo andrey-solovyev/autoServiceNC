@@ -1,26 +1,46 @@
 package Autoservice;
 
-import Autoservice.Cars.Car;
+import Autoservice.Damages.Damage;
 
+/**
+ * Класс Парковка(гараж) со своействами <b>Damages</b>, <b>nowSize</b>.
+ * @autor Андрей Соловьем
+ */
 public class Parking {
-    private Car[] cars;
-    private int lastIndex;
 
+    private Damage[] Damages;
+    /**
+     * Отвечает за то,чтобы когда мастер брал машину, новые не въезжали на парковку
+     */
+    private int nowSize;
+    /**
+     * Идея была в том, чтобы в массив из очереди кидать машину на парковочное место.
+     */
     public Parking(int size) {
-        this.cars = new Car[size];
-        this.lastIndex = 0;
+        this.Damages = new Damage[size];
+        this.nowSize=0;
     }
 
-
-    public Car[] getCars() {
-        return cars;
+    public boolean isParkFree() {
+        return nowSize<Damages.length;
     }
 
-    public void setCars(Car[] cars) {
-        this.cars = cars;
+    public void addNewDamage() {
+        this.nowSize++;
+    }
+    public void deleteDamage(){
+        this.nowSize--;
     }
 
-    public void setCar(int element,Car car){
-        this.cars[element]=car;
+    public Damage[] getDamages() {
+        return Damages;
+    }
+
+    public void setDamages(Damage[] Damages) {
+        this.Damages = Damages;
+    }
+
+    public void setDamage(int element,Damage Damage){
+        this.Damages[element]=Damage;
     }
 }

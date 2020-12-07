@@ -2,7 +2,10 @@ package Autoservice.Damages;
 
 
 import Autoservice.Cars.Car;
-
+/**
+ * Класс поломка <b>timeForRepairs</b>, <b>cost</b>,<b>car</b>.
+ * @autor Андрей Соловьем
+ */
 public class Damage {
     private int timeForRepairs;
     private double cost;

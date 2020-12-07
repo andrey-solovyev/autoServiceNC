@@ -1,5 +1,9 @@
 package Autoservice.Cars;
 
+/**
+ * Класс мащина <b>brand</b>, <b>model</b>,<b>year</b>.
+ * @autor Андрей Соловьем
+ */
 public class Car {
     private String brand;
     private String model;
