@@ -1,7 +1,6 @@
-package Autoservice.Damages;
+package Autoservice.damages;
 
 
-import Autoservice.Cars.Car;
 /**
  * Класс поломка <b>timeForRepairs</b>, <b>cost</b>,<b>car</b>.
  * @autor Андрей Соловьем

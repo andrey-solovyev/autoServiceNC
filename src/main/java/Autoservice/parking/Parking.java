@@ -1,13 +1,12 @@
-package Autoservice;
+package Autoservice.parking;
 
-import Autoservice.Damages.BreakDown;
-import Autoservice.Orders.Order;
+import Autoservice.orders.Order;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Класс Парковка(гараж) со своействами <b>Damages</b>, <b>nowSize</b>.
+ * Класс Парковка(гараж) со своействами <b>damages</b>, <b>nowSize</b>.
  * @autor Андрей Соловьем
  */
 public class Parking {

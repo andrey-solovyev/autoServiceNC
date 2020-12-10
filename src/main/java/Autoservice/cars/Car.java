@@ -1,4 +1,4 @@
-package Autoservice.Cars;
+package Autoservice.cars;
 
 /**
  * Класс мащина <b>brand</b>, <b>model</b>,<b>year</b>.

@@ -1,7 +1,7 @@
-package Autoservice;
+package Autoservice.logics;
 
 
-import Autoservice.Orders.Order;
+import Autoservice.orders.Order;
 
 /**
  * Класс Мастер со своействами <b>name</b>, <b>order</b>,<b>isBusy</b>.

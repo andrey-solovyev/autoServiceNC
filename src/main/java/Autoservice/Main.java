@@ -1,6 +1,6 @@
 package Autoservice;
 
-import Autoservice.Logics.ServiceBuilding;
+import Autoservice.logics.ServiceBuilding;
 
 import java.util.Scanner;
 

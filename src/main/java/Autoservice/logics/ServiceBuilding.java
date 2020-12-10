@@ -1,15 +1,10 @@
-package Autoservice.Logics;
+package Autoservice.logics;
 
 
-import Autoservice.Damages.BreakDown;
-import Autoservice.Databases.Database;
-import Autoservice.Master;
-import Autoservice.Orders.Order;
-import Autoservice.Parking;
+import Autoservice.orders.Order;
+import Autoservice.parking.Parking;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * Класс Логика со своействами <b>masters</b>, <b>sizeParking</b>,<b>amountTowTruck</b>(то что передаем).

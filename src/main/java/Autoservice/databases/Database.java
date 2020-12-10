@@ -1,7 +1,6 @@
-package Autoservice.Databases;
+package Autoservice.databases;
 
-import Autoservice.Damages.BreakDown;
-import Autoservice.Orders.Order;
+import Autoservice.orders.Order;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,9 +1,9 @@
-package Autoservice.Logics;
+package Autoservice.logics;
 
 
-import Autoservice.Cars.Car;
-import Autoservice.Damages.BreakDown;
-import Autoservice.Orders.Order;
+import Autoservice.cars.Car;
+import Autoservice.damages.BreakDown;
+import Autoservice.orders.Order;
 
 import java.util.LinkedList;
 import java.util.Queue;
