@@ -1,8 +1,6 @@
 package Autoservice;
 
-import Autoservice.Databases.Database;
-import Autoservice.Logics.Logic;
-import com.sun.nio.sctp.SctpStandardSocketOptions;
+import Autoservice.Logics.ServiceBuilding;
 
 import java.util.Scanner;
 
@@ -18,8 +16,8 @@ public class Main {
         int sizeParking = scanner.nextInt();
         System.out.println("Введите количество эвакуаторов: ");
         int amountTowTruck = scanner.nextInt();
-        Logic logic = new Logic(amountMasters, sizeParking, amountTowTruck);
-        logic.startApplication();
+        ServiceBuilding serviceBuilding = new ServiceBuilding(amountMasters, sizeParking, amountTowTruck);
+        serviceBuilding.startApplication();
         // write your code here
     }
 }

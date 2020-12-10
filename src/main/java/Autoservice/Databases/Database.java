@@ -1,12 +1,12 @@
 package Autoservice.Databases;
 
-import Autoservice.Damages.Damage;
+import Autoservice.Damages.BreakDown;
+import Autoservice.Orders.Order;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
 
 /**
  * Класс база данных
@@ -40,11 +40,10 @@ public class Database {
         }
         return dbConnection;
     }
-    public void insertReadyDamage(String master,Damage damage) {
+    public void insertReadyDamage(String master, Order order) {
         Connection dbConnection = null;
         Statement statement = null;
-
-        String insertTableSQL = String.format("INSERT INTO Car_reparing (NAME_MASTER, BRAND_CAR, MODEL_CAR, CAR_YEAR,COST_REPAIR,TIME_FOR_REPARING,)VALUES %s,%s,%s, %s,%s,%d)",master,damage.getCar().getBrand(),damage.getCar().getModel(),damage.getCar().getYear(),damage.getCost(),damage.getTimeForRepairs());
+        String insertTableSQL = String.format("INSERT INTO Car_reparing (NAME_MASTER, BRAND_CAR, MODEL_CAR, CAR_YEAR,COST_REPAIR,TIME_FOR_REPARING,)VALUES %s,%s,%s, %s,%s,%d)",master,order.getCar().getBrand(),order.getCar().getModel(),order.getCar().getYear(),order.getDamage().getCost(),order.getDamage().getTimeForRepairs());
         try {
             dbConnection = getDBConnection();
             statement = dbConnection.createStatement();

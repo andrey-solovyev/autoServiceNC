@@ -6,16 +6,16 @@ import Autoservice.Cars.Car;
  * Класс поломка <b>timeForRepairs</b>, <b>cost</b>,<b>car</b>.
  * @autor Андрей Соловьем
  */
-public class Damage {
+public class BreakDown {
     private int timeForRepairs;
     private double cost;
-    private Car car;
 
-    public Damage(int timeForRepairs, double cost, Car car) {
+    public BreakDown(int timeForRepairs, double cost) {
         this.timeForRepairs = timeForRepairs;
         this.cost = cost;
-        this.car = car;
     }
+
+
 
     public int getTimeForRepairs() {
         return timeForRepairs;
@@ -31,13 +31,5 @@ public class Damage {
 
     public void setCost(double cost) {
         this.cost = cost;
-    }
-
-    public Car getCar() {
-        return car;
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
     }
 }

@@ -1,13 +1,10 @@
 package Autoservice;
 
-import Autoservice.Damages.Damage;
 
-import java.util.Comparator;
-import java.util.TreeSet;
-
+import Autoservice.Orders.Order;
 
 /**
- * Класс Мастер со своействами <b>name</b>, <b>damage</b>,<b>isBusy</b>.
+ * Класс Мастер со своействами <b>name</b>, <b>order</b>,<b>isBusy</b>.
  * @autor Андрей Соловьем
  */
 public class Master implements Runnable {
@@ -19,7 +16,7 @@ public class Master implements Runnable {
     /**
      * Поле поломка отданная текущему мастеру
      */
-    private Damage damage;
+    private Order order;
     /**
      * Поле проверки занят ли он
      */
@@ -31,7 +28,7 @@ public class Master implements Runnable {
 
     @Override
     public void run() {
-        if (getDamage() != null) {
+        if (getOrder() != null) {
             try {
                 setBusy(true);
                 Thread.sleep(60 * getTimeToWork());
@@ -43,15 +40,15 @@ public class Master implements Runnable {
     }
 
     private int getTimeToWork() {
-        return getDamage().getTimeForRepairs();
+        return getOrder().getDamage().getTimeForRepairs();
     }
 
-    public Damage getDamage() {
-        return damage;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setDamage(Damage damage) {
-        this.damage = damage;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public boolean isBusy() {
