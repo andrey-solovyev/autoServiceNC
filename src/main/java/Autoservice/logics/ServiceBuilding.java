@@ -60,7 +60,9 @@ public class ServiceBuilding {
                 }
                 if (!master.isBusy()) {
                     parking.checkCarsForReparing();
+                    System.out.println(parking.getParkingQueue().size());
                     master.setOrder(parking.getParkingQueue().poll());
+                    System.out.println(master.getOrder().getCar());
                     System.out.println(String.format("%s взял в работу машину %s %s", master.getName(), master.getOrder().getCar().getBrand(), master.getOrder().getCar().getModel()));
                     new Thread(master).start();
                 }

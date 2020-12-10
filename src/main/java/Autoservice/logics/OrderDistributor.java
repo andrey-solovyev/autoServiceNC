@@ -39,28 +39,15 @@ public class OrderDistributor {
             }
         }.start();
     }
-//    /**
-//     * Функция для проверки, что есть новая машина в гараже
-//     */
-//    private void checkCarsForReparing() {
-//        while (reparing.peek() == null) {
-//            synchronized (reparing) {
-//                try {
-//                    reparing.wait();
-//                } catch (InterruptedException e) {
-//                }
-//            }
-//        }
-//    }
 
     /**
      * Функция для для работы с очередями и "доставки" машин
      */
     private void pickUpTheCar() {
-        if (generateOrder.getOrderQueue().size() < getAmountTowTruck()) {
+        if (deliveryQueue.size() < getAmountTowTruck()) {
             deliveryQueue.add(generateOrder.getOrderQueue().poll());
         }
-        if (parking.isParkFree()) {
+        if (parking.isParkFree() && deliveryQueue.size()>0) {
             parking.addNewOrderInParking(deliveryQueue.poll());
             parking.addNewOrder();
             synchronized (parking.getParkingQueue()) {

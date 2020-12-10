@@ -26,7 +26,7 @@ public class Parking {
     }
 
     public void checkCarsForReparing(){
-        if (getParkingQueue()!=null){
+        while (getParkingQueue().size()==0){
             synchronized (getParkingQueue()){
                 try {
                     getParkingQueue().wait();
